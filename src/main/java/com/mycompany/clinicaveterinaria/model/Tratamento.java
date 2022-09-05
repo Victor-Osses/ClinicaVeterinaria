@@ -61,6 +61,4 @@ public class Tratamento {
     public Date getDataIni() {
         return dataIni;
     }
-            
-    
 }

@@ -1,23 +1,23 @@
 package com.mycompany.clinicaveterinaria.model;
 
-import java.util.List;
-
 /**
  *
  * @author Victor Hugo Costa Osses 254373
  */
 public class Cliente extends Pessoa {
-    private final int codCli;
+    private final int id;
     private String cep;
     private String email;
-    private List<Animal> animais;
 
-    public Cliente(int codCli, String cep, String email, int codPess, String nome, String endereco, String telefone, List<Animal> animais) {
+    public Cliente(int id, String cep, String email, int codPess, String nome, String endereco, String telefone) {
         super(codPess, nome, endereco, telefone);
-        this.codCli = codCli;
+        this.id = id;
         this.cep = cep;
         this.email = email;
-        this.animais = animais;
+    }
+
+    public int getId() {
+        return id;
     }
 
     @Override
@@ -54,10 +54,6 @@ public class Cliente extends Pessoa {
     public String getNome() {
         return super.getNome(); 
     }
-   
-    public int getCodCli() {
-        return codCli;
-    }
     
     public String getCep() {
         return cep;
@@ -74,13 +70,6 @@ public class Cliente extends Pessoa {
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    public void setAnimais(List<Animal> animais) {
-        this.animais = animais;
-    }
-
-    public List<Animal> getAnimais() {
-        return animais;
-    }
+ 
    
 }
